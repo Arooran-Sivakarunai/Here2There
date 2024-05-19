@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<!-- File ./templates/index.html  -->
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="carousel carousel-center max-w-max p-4 space-x-4 bg-neutral rounded-box min-h-max">
+    {% for d in data%}
+    <div class="carousel-item">{{d}}</div>
+    {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>
